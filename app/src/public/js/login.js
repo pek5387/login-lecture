@@ -15,5 +15,5 @@ function login(){
             "Content-Type" : "application/json",
         },
         body: JSON.stringify(req),
-    });
+    }).then((res) => console.log(res.json()));
 }
