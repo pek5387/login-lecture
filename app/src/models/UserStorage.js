@@ -13,9 +13,23 @@ class UserStorage {
             if(users.hasOwnProperty(field)) {
                 newUsers[field] = users[field];
             }
+            
             return newUsers;
-        },{});
+        }, {});
+
         return newUsers;
+    }
+
+    static getUserInfo(id){
+        const users = this.#users;
+        const idx = users.id.indexOf(id);
+        const userkeys = Object.keys(users)
+        const userInfo = userkeys.reduce((newUser, info) => {
+            newUser[info] = users[info][idx];
+            return newUser;
+        }, {});
+
+        return userInfo;
     }
 }
 

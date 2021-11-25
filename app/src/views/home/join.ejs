@@ -5,13 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script src="/js/login.js" defer></script>
+        <script src="/js/log.js" defer></script>
     </head>
     <body>
-        <h2>로그인</h2>
+        <h1>회원가입</h1>
         <input id="id" type="text" placeholder="아이디"><br/>
+        <input id="name" type="password" placeholder="성함"><br/>
         <input id="pw" type="password" placeholder="비밀번호"><br/>
-        <button onclick="login();">로그인</button>
-        <a href="/join">회원가입하기</a>
+        <input id="pwCf" type="password" placeholder="비밀번호 확인"><br/>
+        <button onclick="join();">회원가입</button>
+        <a href="/login">로그인하기</a>
     </body>
 </html>
