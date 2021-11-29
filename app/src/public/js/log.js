@@ -29,13 +29,12 @@ function login(){
 }
 
 function join(){
+    if(pw.value !== pwCf.value)return alert('비밀번호가 동일하지 않습니다.');
     const req = {
         id: id.value,
         name: name.value,
         pw: pw.value,
-        pwCf: pwCf.value,
     };
-    console.log(req);
     fetch("/join", {
         method: "POST",
         headers: {
