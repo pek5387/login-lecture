@@ -16,14 +16,14 @@ const output = {
 }
 
 const process = {
-    login: (req, res) => {
+    login: async (req, res) => {
         const user = new User(req.body);
-        const response = user.login();
+        const response = await user.login();
         return res.json(response);
     },
-    join: (req, res) => {
+    join: async (req, res) => {
         const user = new User(req.body);
-        const response = user.join();
+        const response = await user.join();
         return res.json(response);
     },
 }
