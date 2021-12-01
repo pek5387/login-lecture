@@ -26,6 +26,11 @@ const process = {
         const response = await user.join();
         return res.json(response);
     },
+    duplicateCheck: async (req, res) => {
+        const user = new User(req.body);
+        const response = await user.duplicateCheck();
+        return res.json(response);
+    },
 }
 
 
